@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <math.h>
 
-int N = 16;
+int N = 15;
 int iter = 4;
 
 #define IX(x, y) ((x) + (y) * N)
@@ -233,10 +233,10 @@ void printMap(FluidCube *cube)
         std :: cout << '/';
     }
     std :: cout << std :: endl;
-    for (int i = 0; i < 16; i++)
+    for (int i = 0; i < N; i++)
     {
         std :: cout << '/';
-        for (int j = 0; j < 16; j++)
+        for (int j = 0; j < N; j++)
         {
             d = cube->density[IX(i, j)];
             if (d > 7) std :: cout << "▓";
@@ -255,10 +255,10 @@ void printMap(FluidCube *cube)
 void UIPrint(int size, FluidCube *cube)
 {
     std::cout << "Refresh" << std::endl;
-    float x = 7;
-    float y = 7;
+    float x = N/2;
+    float y = N/2;
     FluidCubeAddDensity(cube, x, y, 100);
-    FluidCubeAddVelocity(cube, x, y, x - rand() % 16, y - rand() % 16);
+    FluidCubeAddVelocity(cube, x, y, x + rand() % N/2, y - rand() % N);
     printMap(cube);
     std::cin.get();
     system("clear");
@@ -266,11 +266,11 @@ void UIPrint(int size, FluidCube *cube)
 
 int main() 
 {
-    FluidCube *cube = FluidCubeCreate(16, 0.2, 0, 0.0000001);
+    FluidCube *cube = FluidCubeCreate(N, 0.2, 0, 0.0000001);
     while (true)
     {
         FluidCubeStep(cube);
-        UIPrint(16, cube);
+        UIPrint(N, cube);
     }
         
 }
