@@ -1,8 +1,0 @@
-[
-  {
-    "directory": "/home/minhdang/Documents/Code/CLI_Fluid_Simulation/builddir",
-    "command": "c++ -Imain@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -MD -MQ 'main@exe/src_main.cpp.o' -MF 'main@exe/src_main.cpp.o.d' -o 'main@exe/src_main.cpp.o' -c ../src/main.cpp",
-    "file": "../src/main.cpp",
-    "output": "main@exe/src_main.cpp.o"
-  }
-]
