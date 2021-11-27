@@ -188,7 +188,6 @@ static void project(float *velocX, float *velocY, float *p, float *div)
 
 void FluidCubeStep(FluidCube *cube) // in Main
 {
-    int N          = cube->size;
     float visc     = cube->visc;
     float diff     = cube->diff;
     float *Vx      = cube->Vx;
@@ -230,7 +229,6 @@ void FluidCubeAddVelocity(FluidCube *cube, int x, int y, float amountX, float am
 void printMap(FluidCube *cube)
 {
     float d;
-    char map[N][N];
     for (int i = 0; i < N+2; i++){
         std :: cout << '/';
     }
