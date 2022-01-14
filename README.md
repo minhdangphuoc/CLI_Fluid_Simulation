@@ -10,16 +10,19 @@
 This project using meson to build, so you have to download and install it to your computer. Meson Build
 
 ## Build
-meson setup builddir //  Initialize the build
-cd builddir // Move to build dirrectory
-ninja && ./main // Run built
-Change name of built
-Change this code in meson.build for changing the name.
-
+```
+  meson setup builddir //  Initialize the build
+  cd builddir // Move to build dirrectory
+  ninja && ./main // Run built
+  Change name of built
+  Change this code in meson.build for changing the name.
+```
 // meson.build
-...
-executable('main', 'main.cpp', link_with : lib) // change main to another name
-...
+ ```
+  ...
+  executable('main', 'main.cpp', link_with : lib) // change main to another name
+  ...
+```
 ## Issues
 - Not found yet.
 ## References
